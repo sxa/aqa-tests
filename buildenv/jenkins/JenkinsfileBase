@@ -32,7 +32,7 @@ def setupEnv() {
 		sh(script:'powershell -c "Get-Process java | select id,processname,starttime"', returnStatus:true)
 	} else {
 		sh(script:'ps -fu '+"${env.USER}"+' | egrep "java|vfb" | egrep -v "remoting.jar|agent.jar|grep"', returnStatus: true)
-                sh(script:'kill $(ps -fu '+"${env.USER}"+' | grep -- -vfb | awk "{print$2}")', returnStatus: false)
+                sh(script:'kill \$(ps -fu '+"${env.USER}"+' | grep -- -vfb | awk "{print\$2}")', returnStatus: false)
 	}
 
 	if ( params.JDK_VERSION ) {
