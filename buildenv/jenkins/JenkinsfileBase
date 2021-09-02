@@ -31,7 +31,7 @@ def setupEnv() {
 	if (PLATFORM.contains("windows")) {
 		sh(script:'powershell -c "Get-Process java | select id,processname,starttime"', returnStatus:true)
 	} else {
-		sh(script:'ps -fu '+"${env.USER}"+' | grep java | egrep -v "remoting.jar|agent.jar|grep"', returnStatus: true)
+		sh(script:'ps -fu '+"${env.USER}"+' | egrep "java|vfb" | egrep -v "remoting.jar|agent.jar|grep"', returnStatus: true)
 	}
 
 	if ( params.JDK_VERSION ) {
@@ -591,8 +591,8 @@ def runTest( ) {
 			for (int i = 1; i <= ITERATIONS; i++) {
 				echo "ITERATION: ${i}/${ITERATIONS}"
 				if (env.SPEC.startsWith('aix')) {
-					sh "nohup /usr/bin/X11/X -force -vfb -x abx -x dbe -x GLX :0 &"
-					env.DISPLAY = ":0"
+					sh "/usr/bin/X11/X -force -vfb -x abx -x dbe -x GLX -secIP 000 :1 &"
+					env.DISPLAY = ":1"
 					echo "env.DISPLAY is ${env.DISPLAY}"
 					makeTest("${RUNTEST_CMD}")
 				}
