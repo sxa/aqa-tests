@@ -190,7 +190,7 @@
 			<arg value="-b"/>
 			<arg value="${stf_branch}"/>
 			<arg value="${stf_repo}"/>
-			<arg value="stf"/>
+			<arg value="STF"/>
 		</exec>
 		<if>
 			<isset property="isZOS" />
