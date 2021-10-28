@@ -196,18 +196,18 @@
 			<isset property="isZOS" />
 			<then>
 				<delete includeemptydirs="true" failonerror="false">
-					<fileset dir="${SYSTEMTEST_ROOT}/stf/.git/info" includes="**/*"/>
+					<fileset dir="${SYSTEMTEST_ROOT}/STF/.git/info" includes="**/*"/>
 				</delete>
-				<mkdir dir="${SYSTEMTEST_ROOT}/stf/.git/info" />
-				<move file="${SYSTEMTEST_ROOT}/stf/.gitattributes.zos" tofile="${SYSTEMTEST_ROOT}/stf/.git/info/attributes" />
-				<exec executable="git" dir="${SYSTEMTEST_ROOT}/stf" failonerror="false">
+				<mkdir dir="${SYSTEMTEST_ROOT}/STF/.git/info" />
+				<move file="${SYSTEMTEST_ROOT}/STF/.gitattributes.zos" tofile="${SYSTEMTEST_ROOT}/STF/.git/info/attributes" />
+				<exec executable="git" dir="${SYSTEMTEST_ROOT}/STF" failonerror="false">
 					<arg value="rm" />
 					<arg value="--cached" />
 					<arg value="-r" />
 					<arg value="-q" />
 					<arg value="." />
 				</exec>
-				<exec executable="git" dir="${SYSTEMTEST_ROOT}/stf" failonerror="false">
+				<exec executable="git" dir="${SYSTEMTEST_ROOT}/STF" failonerror="false">
 					<arg value="reset" />
 					<arg value="--hard" />
 				</exec>
@@ -264,14 +264,14 @@
 	<target name="check_systemtest" depends="init">
 		<if>
 			<not>
-				<available file="${SYSTEMTEST_ROOT}/stf" type="dir" />
+				<available file="${SYSTEMTEST_ROOT}/STF" type="dir" />
 			</not>
 			<then>
-				<echo message="${SYSTEMTEST_ROOT}/stf does not exist, clone from GitHub" />
+				<echo message="${SYSTEMTEST_ROOT}/STF does not exist, clone from GitHub" />
 				<antcall target="clone_stf" inheritall="true" />
 			</then>
 			<else>
-				<echo message="${SYSTEMTEST_ROOT}/stf exists, skip cloning" />
+				<echo message="${SYSTEMTEST_ROOT}/STF exists, skip cloning" />
 			</else>
 		</if>
 		<if>
@@ -302,8 +302,8 @@
 				<available file="${SYSTEMTEST_BUILD_ROOT}/aqa-systemtest" type="dir" />
 			</not>
 			<then>
-				<copy todir="${SYSTEMTEST_BUILD_ROOT}/stf">
-					<fileset dir="${SYSTEMTEST_ROOT}/stf" includes="**" />
+				<copy todir="${SYSTEMTEST_BUILD_ROOT}/STF">
+					<fileset dir="${SYSTEMTEST_ROOT}/STF" includes="**" />
 				</copy>
 				<copy todir="${SYSTEMTEST_BUILD_ROOT}/aqa-systemtest">
 					<fileset dir="${SYSTEMTEST_ROOT}/aqa-systemtest" includes="**" />
@@ -370,6 +370,6 @@
 
 	<target name="clean">
 		<ant antfile="${SYSTEMTEST_ROOT}/aqa-systemtest/openjdk.build/build.xml" dir="${SYSTEMTEST_ROOT}/aqa-systemtest/openjdk.build" inheritAll="false" target="clean"></ant>
-		<ant antfile="${SYSTEMTEST_ROOT}/stf/stf.build/build.xml" dir="${SYSTEMTEST_ROOT}/stf/stf.build" inheritAll="false" target="clean"></ant>
+		<ant antfile="${SYSTEMTEST_ROOT}/STF/stf.build/build.xml" dir="${SYSTEMTEST_ROOT}/STF/stf.build" inheritAll="false" target="clean"></ant>
 	</target>
 </project>
