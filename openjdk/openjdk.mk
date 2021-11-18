@@ -16,6 +16,7 @@ NPROCS:=1
 MEMORY_SIZE:=1024
 
 OS:=$(shell uname -s)
+ARCH=$(shell uname -m)
 
 ifeq ($(OS),Linux)
 	NPROCS:=$(shell grep -c ^processor /proc/cpuinfo)
@@ -79,10 +80,14 @@ JTREG_BASIC_OPTIONS += -retain:fail,error,*.dmp,javacore.*,heapdump.*,*.trc
 JTREG_IGNORE_OPTION = -ignore:quiet
 JTREG_BASIC_OPTIONS += $(JTREG_IGNORE_OPTION)
 # Multiple by 8 the timeout numbers, except on zOS use 2
-ifneq ($(OS),OS/390)
-	JTREG_TIMEOUT_OPTION =  -timeoutFactor:8
+
+ifeq ($(OS),OS/390)
+ 	JTREG_TIMEOUT_OPTION = -timeoutFactor:20
 else
-	JTREG_TIMEOUT_OPTION =  -timeoutFactor:2
+ifeq ($(ARCH),riscv64)
+ 	JTREG_TIMEOUT_OPTION = -timeoutFactor:24
+else
+	JTREG_TIMEOUT_OPTION =  -timeoutFactor:8
 endif
 JTREG_BASIC_OPTIONS += $(JTREG_TIMEOUT_OPTION)
 # Create junit xml
