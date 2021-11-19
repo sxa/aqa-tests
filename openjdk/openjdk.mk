@@ -87,7 +87,7 @@ else
 ifeq ($(ARCH),riscv64)
  	JTREG_TIMEOUT_OPTION = -timeoutFactor:24
 else
-	JTREG_TIMEOUT_OPTION =  -timeoutFactor:8
+	JTREG_TIMEOUT_OPTION = -timeoutFactor:30
 endif
 JTREG_BASIC_OPTIONS += $(JTREG_TIMEOUT_OPTION)
 # Create junit xml
