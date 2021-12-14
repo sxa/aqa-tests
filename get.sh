@@ -35,8 +35,8 @@ JDK_VERSION="8"
 JDK_IMPL="openj9"
 RELEASES="latest"
 TYPE="jdk"
-TEST_IMAGES_REQUIRED=true
-DEBUG_IMAGES_REQUIRED=true
+TEST_IMAGES_REQUIRED=false
+DEBUG_IMAGES_REQUIRED=false
 CURL_OPTS="s"
 
 usage ()
@@ -134,10 +134,10 @@ parseCommandLineArgs()
 				VENDOR_DIRS="$1"; shift;;
 
 			"--test_images_required" )
-				TEST_IMAGES_REQUIRED="$1"; shift;;
+				TEST_IMAGES_REQUIRED="false"; shift;;
 
 			"--debug_images_required" )
-				DEBUG_IMAGES_REQUIRED="$1"; shift;;
+				DEBUG_IMAGES_REQUIRED="false"; shift;;
 
 			"--curl_opts" )
 				CURL_OPTS="$1"; shift;;
