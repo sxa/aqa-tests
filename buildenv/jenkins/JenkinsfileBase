@@ -156,7 +156,7 @@ def setupParallelEnv() {
 
 				try {
 					//get cached TRSS JSON data
-					timeout(time: 1, unit: 'HOURS') {
+					timeout(time: 2, unit: 'HOURS') {
 						copyArtifacts fingerprintArtifacts: true, projectName: "getTRSSOutput", selector: lastSuccessful(), target: 'aqa-tests/TKG/resources/TRSS'
 						sh "cd ./aqa-tests/TKG/resources/TRSS; gzip -cd TRSSOutput.tar.gz | tar xof -; rm TRSSOutput.tar.gz"
 					}
@@ -383,7 +383,7 @@ def setup() {
 			}
 
 			if (SDK_RESOURCE == 'upstream' && !params.CUSTOMIZED_SDK_URL) {
-				timeout(time: 1, unit: 'HOURS') {
+				timeout(time: 3, unit: 'HOURS') {
 					dir('openjdkbinary') {
 						step([$class: 'CopyArtifact',
 							fingerprintArtifacts: true,
