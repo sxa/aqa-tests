@@ -277,6 +277,7 @@ EXTRAJCKJNIDEP=$(SRCDIR)\src\share\lib\jni\include\windows\jckjni_md.h-DIST
 $(EXTRAJCKJNIDEP):
 	cp "$(SRCDIR)\src\share\lib\jni\include\windows\jckjni_md.h" "$(EXTRAJCKJNIDEP)"
 	perl -p -i -e 'print "#if (defined(WIN32) || defined(_WIN32))\n#include <synchapi.h>\n#endif\n\n" if $$_ =~ /^#endif.*JCKJNI_MD_H/' "$(SRCDIR)\src\share\lib\jni\include\windows\jckjni_md.h"
+	perl -p -i -e 'print "#if (defined(WIN32) || defined(_WIN32))\n#include <synchapi.h>\n#endif\n\n" if $$_ =~ /^#endif.*JAVASOFT_JNI_MD_H/' "$(SRCDIR)\src\share\lib\jni\include\windows\jckjni_md.h"
 
 endif
 endif
