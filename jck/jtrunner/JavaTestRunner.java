@@ -634,7 +634,8 @@ public class JavaTestRunner {
 				}
 			}
 
-			if ( tests.startsWith("vm/jvmti") || tests.equals("vm") ) {
+			if ( !jckVersion.contains("jck19") &&
+			      (tests.startsWith("vm/jvmti") || tests.equals("vm")) ) {
 				fileContent += "set jck.env.runtime.testExecute.jvmtiLivePhase Yes;\n";
 			}
 
@@ -790,6 +791,8 @@ public class JavaTestRunner {
 				}
 			} else if (jckVersion.contains("jck11")) {
 				fileContent += "set jck.env.compiler.testCompile.otherOpts \"-source 11 \"" + ";\n";
+			} else if (jckVersion.contains("jck19")) {
+			        fileContent += "set jck.env.compiler.testCompile.otherOpts \"-source " + jckVersionNo + "\";\n";
 			} else { // This is the case where JCK Version > 11
 				fileContent += "set jck.env.compiler.testCompile.otherOpts \"-source " + jckVersionNo + " --enable-preview\"" + ";\n";
 			} 
@@ -809,7 +812,8 @@ public class JavaTestRunner {
 
 			extraJvmOptions += suppressOutOfMemoryDumpOptions;
 
-			if (getJckVersionInt(jckVersionNo) > 11) {
+			if (getJckVersionInt(jckVersionNo) > 11 &&
+			    getJckVersionInt(jckVersionNo) < 19 ) {
 				extraJvmOptions += " --enable-preview -Xfuture ";
 			}
 

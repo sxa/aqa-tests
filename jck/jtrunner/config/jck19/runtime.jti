@@ -120,10 +120,10 @@ jck.env.runtime.testExecute.jmx=Yes
 # jck.env.runtime.testExecute.jmxResourcePathFileValue example: /jck/jck19/natives/linux_x86-64
 jck.env.runtime.testExecute.jmxResourcePathFileValue=will_be_set_by_test_automation_at_run_time
 jck.env.runtime.testExecute.jni=Yes
-jck.env.runtime.testExecute.jvmti=Yes
-jck.env.runtime.testExecute.jvmtiAgentOptionsTempl=-agentlib\:\#\=@
-jck.env.runtime.testExecute.jvmtiLivePhase=Yes
-jck.env.runtime.testExecute.jvmtiLivePhaseLauncherImpl=javasoft.sqe.jck.lib.attach.JVMTIAttachConnector
+jck.env.runtime.testExecute.jvmti=No
+#jck.env.runtime.testExecute.jvmtiAgentOptionsTempl=-agentlib\:\#\=@
+#jck.env.runtime.testExecute.jvmtiLivePhase=Yes
+#jck.env.runtime.testExecute.jvmtiLivePhaseLauncherImpl=javasoft.sqe.jck.lib.attach.JVMTIAttachConnector
 jck.env.runtime.testExecute.libPath=environment variable
 # jck.env.runtime.testExecute.libPathEnv example: LD_LIBRARY_PATH
 jck.env.runtime.testExecute.libPathEnv=will_be_set_by_test_automation_at_run_time
@@ -150,7 +150,7 @@ jck.env.simpleOrAdvanced=advanced
 # jck.env.testPlatform.display example: ':1' or xxxx.xxxx.xxxx.com\:0.0
 jck.env.testPlatform.display=will_be_set_by_test_automation_at_run_time
 jck.env.testPlatform.headless=No
-jck.env.testPlatform.jvmti=Yes
+jck.env.testPlatform.jvmti=No
 jck.env.testPlatform.multiJVM=Yes
 jck.env.testPlatform.nativeCode=Yes
 jck.env.testPlatform.needProxy=No
