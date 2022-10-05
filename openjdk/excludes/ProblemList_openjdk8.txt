@@ -85,8 +85,6 @@ runtime/SharedArchiveFile/LimitSharedSizes.java https://github.com/adoptium/aqa-
 runtime/SharedArchiveFile/PrintSharedArchiveAndExit.java https://github.com/adoptium/aqa-tests/issues/2659 linux-ppc64le,aix-all
 runtime/SharedArchiveFile/SharedArchiveFile.java https://github.com/adoptium/aqa-tests/issues/2659 linux-ppc64le,aix-all
 runtime/SharedArchiveFile/SpaceUtilizationCheck.java https://github.com/adoptium/aqa-tests/issues/2659 linux-ppc64le,aix-all
-serviceability/jvmti/TestRedefineWithUnresolvedClass.java	https://github.com/adoptium/aqa-tests/issues/124	generic-all
-serviceability/jvmti/GetObjectSizeOverflow.java	https://github.com/adoptium/aqa-tests/issues/124	linux-all
 serviceability/sa/jmap-hashcode/Test8028623.java	https://github.com/adoptium/aqa-tests/issues/124	linux-all
 compiler/rtm/locking/TestUseRTMAfterLockInflation.java https://bugs.openjdk.java.net/browse/JDK-8180723 generic-all
 compiler/rtm/locking/TestUseRTMForInflatedLocks.java https://bugs.openjdk.java.net/browse/JDK-8180723 generic-all
