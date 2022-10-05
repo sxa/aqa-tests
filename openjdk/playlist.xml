@@ -205,7 +205,7 @@
 	$(TEST_STATUS)</command>
 		<versions>
 			<version>8</version>
-			<version>9</version>
+			<version>19</version>
 		</versions>
 		<levels>
 			<level>extended</level>
