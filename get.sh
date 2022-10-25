@@ -697,6 +697,15 @@ checkOpenJ9RepoSHA()
 	checkRepoSHA "$TESTDIR/openj9" "OPENJ9"
 }
 
+echo === SXAEC: Checking for processes:
+ps -fu jenkins
+ps -fu jenkins | grep /java | grep -v remoting | awk '{print$2}' | xargs echo kill
+ps -fu jenkins | grep /java | grep -v remoting | awk '{print$2}' | xargs kill || true
+sleep 10
+echo === SXAEC: Killed java processes - Showing list again:
+ps -fu jenkins
+exit 10
+
 parseCommandLineArgs "$@"
 if [ "$USE_TESTENV_PROPERTIES" = true ]; then
 	if [[ "$PLATFORM" == *"zos"* ]]; then
