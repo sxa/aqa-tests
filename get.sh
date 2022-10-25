@@ -697,10 +697,13 @@ checkOpenJ9RepoSHA()
 	checkRepoSHA "$TESTDIR/openj9" "OPENJ9"
 }
 
-echo === SXAEC: Checking for processes:
+set -x
+
+echo === SXAEC: Checking for processes on `hostname`:
+
 ps -fu jenkins
-ps -fu jenkins | grep /java | grep -v remoting | awk '{print$2}' | xargs echo kill
 ps -fu jenkins | grep /java | grep -v remoting | awk '{print$2}' | xargs kill || true
+
 sleep 10
 echo === SXAEC: Killed java processes - Showing list again:
 ps -fu jenkins
