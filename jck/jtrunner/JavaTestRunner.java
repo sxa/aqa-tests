@@ -142,6 +142,7 @@ public class JavaTestRunner {
 		essentialParameters.add(CUSTOM_JTX);
 
 		for (String arg : args) {
+System.out.println("SXAEC: Processing arg " + arg);
 			if (arg.contains("=")) { 
 				String [] aPair = arg.split("="); 
 				String key = aPair[0]; 
@@ -161,6 +162,7 @@ public class JavaTestRunner {
 						}
 						testArgs.put(key, finalTarget); 
 					} else {
+					System.out.println("SXAEC: Setting key '"+key+"' to: " + value);
 						testArgs.put(key, value); 
 					}
 				} else {
@@ -212,7 +214,8 @@ public class JavaTestRunner {
 
 		File f = new File(jckRoot);
 		File[] files = f.listFiles();
-
+		
+		System.out.println("SXAEC: currencyString = " + concurrencyString);
 		boolean found = false;
 		for (File file : files) {
 			if (file.isDirectory() && (file.getName().contains("JCK-runtime")) ) {
@@ -537,12 +540,13 @@ public class JavaTestRunner {
 		// If concurrency was not specified as a test-arg it will have been assigned the value NULL.
 		// Default to concurrency=cpu.
 		if ( concurrencyString.equals("NULL") ) {
+			System.out.println("SXAEC: CurrencyString is NULL, so setting based on CPU count");
 			concurrencyString = "cpus";
 		}
 
-		// If concurrency=cpus was specified, set concurrency to the number of processors + 1.
+		// If concurrency=cpus was specified, set concurrency to the number of processors * 1.5.
 		if ( concurrencyString.equals("cpus") ) {
-			concurrency = Runtime.getRuntime().availableProcessors() + 1;
+			concurrency = (int)(Runtime.getRuntime().availableProcessors() * 1.5);
 			concurrencyString = String.valueOf(concurrency);
 		}
 		
