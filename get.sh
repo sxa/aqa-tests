@@ -503,7 +503,13 @@ getFunctionalTestMaterial()
 		OPENJ9_BRANCH="-b $OPENJ9_BRANCH"
 	fi
 
-	executeCmdWithRetry "openj9" "git clone --depth 1 --reference-if-able ${HOME}/openjdk_cache $OPENJ9_BRANCH $OPENJ9_REPO"
+	# Allow extracting without reference if using an older
+	# git client (e.g. Solaris 10 with 2.3.1)
+	if git clone 2>&1 | grep reference-if-able; then
+		executeCmdWithRetry "openj9" "git clone --depth 1 --reference-if-able ${HOME}/openjdk_cache $OPENJ9_BRANCH $OPENJ9_REPO"
+	else
+		executeCmdWithRetry "openj9" "git clone --depth 1 $OPENJ9_BRANCH $OPENJ9_REPO"
+	fi
 	rt_code=$?
 	if [ $rt_code != 0 ]; then
 		echo "git clone error code: $rt_code"

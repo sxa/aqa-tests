@@ -24,7 +24,14 @@
 	<property name="DEST" value="${BUILD_ROOT}/openjdk" />
 	<property name="src" location="." />
 	<property environment="env" />
-	<property name="REFERENCE_REPO" value="--reference-if-able ${env.HOME}/openjdk_cache" />
+	<contains string="${SPEC}" substring="zos" />
+	<then>
+		<property name="REFERENCE_REPO" value="--reference-if-able ${env.HOME}/openjdk_cache" />
+	</then>
+	<else>
+		<property name="REFERENCE_REPO" value="" />
+	</else>
+
 
 	<if>
 		<or>
@@ -100,11 +107,13 @@
 					<arg line="xfo ${jtregTar}.tar -C ${DEST}" />
 				</exec>
 			</then>
+<!--
 			<else>
 				<exec executable="sh" failonerror="true">
 					<arg line="-c 'cat ${jtregTar}.tar | (cd ${DEST} &amp;&amp; tar xof -)'" />
 				</exec>
 			</else>
+-->
 		</if>
 	</target>
 
