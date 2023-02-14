@@ -618,6 +618,9 @@ testJavaVersion()
 	if [ "$TEST_JDK_HOME" = "" ]; then
 		TEST_JDK_HOME=$SDKDIR/openjdkbinary/j2sdk-image
 	fi
+        echo LD_LIBRARY_PATH="${LD_LIBRARY_PATH}"
+        export LD_LIBRARY_PATH="$(echo $LD_LIBRARY_PATH | sed 's,/usr/lib/jvm,/BROKEN,g')"
+        
 	_java=${TEST_JDK_HOME}/bin/java
 	_release=${TEST_JDK_HOME}/release
 	# Code_Coverage use different _java through searching javac for now, following path will be modified after refining files from BUILD
