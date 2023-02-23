@@ -767,7 +767,7 @@ public class JavaTestRunner {
 			extraJvmOptions += suppressOutOfMemoryDumpOptions;
 
 			if (getJckVersionInt(jckVersionNo) > 11) {
-				extraJvmOptions += " --enable-preview -Xfuture ";
+				extraJvmOptions += " -Xfuture ";
 			}
 
 			// Add the JVM options supplied by the user plus those added in this method to the jtb file option.

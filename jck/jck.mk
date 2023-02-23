@@ -76,9 +76,6 @@ ifneq ($(filter openj9 ibm, $(JDK_IMPL)),)
   ifneq (,$(findstring zos, $(SPEC)))
     OTHER_OPTS += -Dcom.ibm.tools.attach.enable=yes
   endif
-  ifneq (8, $(JDK_VERSION))
-    OTHER_OPTS += --enable-preview
-  endif
   # if JDK_VERSION >= 17
   ifeq ($(filter 8 9 10 11 12 13 14 15 16, $(JDK_VERSION)),)
     OTHER_OPTS += -XX:-OpenJ9CommandLineEnv
