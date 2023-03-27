@@ -139,61 +139,7 @@
 			</then>
 			<!-- jck materials exist, update jck materials if needed-->
 			<else>
-				<if>
-					<isset property="env.SKIP_JCK_GIT_UPDATE" />
-					<!-- don't want to update local JCK materials -->
-					<then>
-						<echo message="env.SKIP_JCK_GIT_UPDATE is set. Skip Running git update at ${JCK_ROOT_USED}. Continue." />
-					</then>
-					<else>
-						<if>
-							<isset property="local-material-uptodate" />
-							<then> 
-								<echo message="Local JCK materials up-to-date. Skipping update"/>
-							</then>
-							<else>
-								<if>
-									<available file="${JCK_ROOT_USED}/natives" type="dir" />
-									<then>
-										<echo message="Deleting ${JCK_ROOT_USED}/natives..." />
-										<delete includeEmptyDirs="true">
-  											<fileset dir="${JCK_ROOT_USED}/natives"/>
-										</delete>
-									</then>
-								</if>
-								<echo message="Updating ${JCK_ROOT_USED} with latest..." />
-								<exec executable="git" dir="${JCK_ROOT_USED}" failonerror="false" resultproperty="return.code">
-									<arg value="pull" />
-									<arg value="${JCK_GIT_REPO_USED}" />
-									<arg value="${jck_branch}" />
-								</exec>
-								<if>
-									<not>
-										<equals arg1="${return.code}" arg2="0"/>
-									</not> 
-									<then>
-										<echo message="Performing hard reset..." />
-										<exec executable="git" dir="${JCK_ROOT_USED}" failonerror="true">
-											<arg value="reset" />
-											<arg value="--hard" />
-											<arg value="origin/master" />
-										</exec>
-										<exec executable="git" dir="${JCK_ROOT_USED}" failonerror="true">
-											<arg value="clean" />
-											<arg value="-f" />
-											<arg value="-d" />
-										</exec>
-										<exec executable="git" dir="${JCK_ROOT_USED}" failonerror="true">
-											<arg value="pull" />
-											<arg value="${JCK_GIT_REPO_USED}" />
-											<arg value="${jck_branch}" />
-										</exec>
-									</then>
-								</if>
-							</else>
-						</if>
-					</else>
-				</if>
+				<echo message="Skip Running git update at ${JCK_ROOT_USED}. Continue." />
 			</else>
 		</if>
 		<if>
