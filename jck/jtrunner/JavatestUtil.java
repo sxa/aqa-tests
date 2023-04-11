@@ -705,7 +705,7 @@ public class JavatestUtil {
 			fileContent += keyword + ";\n";
 			
 			if (testExecutionType != null && testExecutionType.equals("multijvm")) { 
-				fileContent += "set jck.env.testPlatform.useAgent \"Yes\";\n";
+				fileContent += "set jck.env.testPlatform.useAgent \"No\";\n";
 				fileContent += "set jck.env.compiler.agent.agentType \"passive\";\n";
 				fileContent += "set jck.env.compiler.agent.passiveHost \"" + agentHost + "\"" + ";\n";
 				fileContent += "set jck.env.compiler.agent.passivePortDefault \"Yes\";\n";
