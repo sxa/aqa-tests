@@ -19,9 +19,7 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=lang/BINC testsuite=COMPILER; \
-		$(EXEC_COMPILER_TEST); \
-		$(GEN_SUMMARY_GENERIC) tests=lang/BINC testsuite=COMPILER; \
+		<command>$(JCK_CMD_TEMPLATE) tests=lang/BINC testsuite=COMPILER; \
 	$(TEST_STATUS)</command>
 		<levels>
 			<level>extended</level>
@@ -35,9 +33,7 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=$(COMPILER_LANG_CLASS_TESTS_GROUP1) testsuite=COMPILER; \
-		$(EXEC_COMPILER_TEST); \
-		$(GEN_SUMMARY_GENERIC) tests=$(COMPILER_LANG_CLASS_TESTS_GROUP1) testsuite=COMPILER; \
+		<command>$(JCK_CMD_TEMPLATE) tests=$(COMPILER_LANG_CLASS_TESTS_GROUP1) testsuite=COMPILER; \
 	$(TEST_STATUS)</command>
 		<levels>
 			<level>extended</level>
@@ -51,9 +47,7 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=$(COMPILER_LANG_CLASS_TESTS_GROUP2) testsuite=COMPILER; \
-		$(EXEC_COMPILER_TEST); \
-		$(GEN_SUMMARY_GENERIC) tests=$(COMPILER_LANG_CLASS_TESTS_GROUP2) testsuite=COMPILER; \
+		<command>$(JCK_CMD_TEMPLATE) tests=$(COMPILER_LANG_CLASS_TESTS_GROUP2) testsuite=COMPILER; \
 	$(TEST_STATUS)</command>
 		<levels>
 			<level>extended</level>
@@ -67,9 +61,7 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=$(COMPILER_LANG_CLASS_TESTS_GROUP3) testsuite=COMPILER; \
-		$(EXEC_COMPILER_TEST); \
-		$(GEN_SUMMARY_GENERIC) tests=$(COMPILER_LANG_CLASS_TESTS_GROUP3) testsuite=COMPILER; \
+		<command>$(JCK_CMD_TEMPLATE) tests=$(COMPILER_LANG_CLASS_TESTS_GROUP3) testsuite=COMPILER; \
 	$(TEST_STATUS)</command>
 		<levels>
 			<level>extended</level>
@@ -83,9 +75,7 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=$(COMPILER_LANG_CLASS_TESTS_GROUP4) testsuite=COMPILER; \
-		$(EXEC_COMPILER_TEST); \
-		$(GEN_SUMMARY_GENERIC) tests=$(COMPILER_LANG_CLASS_TESTS_GROUP4) testsuite=COMPILER; \
+		<command>$(JCK_CMD_TEMPLATE) tests=$(COMPILER_LANG_CLASS_TESTS_GROUP4) testsuite=COMPILER; \
 	$(TEST_STATUS)</command>
 		<levels>
 			<level>extended</level>
@@ -99,9 +89,7 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=$(COMPILER_LANG_CLASS_TESTS_GROUP5) testsuite=COMPILER; \
-		$(EXEC_COMPILER_TEST); \
-		$(GEN_SUMMARY_GENERIC) tests=$(COMPILER_LANG_CLASS_TESTS_GROUP5) testsuite=COMPILER; \
+		<command>$(JCK_CMD_TEMPLATE) tests=$(COMPILER_LANG_CLASS_TESTS_GROUP5) testsuite=COMPILER; \
 	$(TEST_STATUS)</command>
 		<levels>
 			<level>extended</level>
@@ -115,9 +103,7 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=$(COMPILER_LANG_CLASS_TESTS_GROUP6) testsuite=COMPILER; \
-		$(EXEC_COMPILER_TEST); \
-		$(GEN_SUMMARY_GENERIC) tests=$(COMPILER_LANG_CLASS_TESTS_GROUP6) testsuite=COMPILER; \
+		<command>$(JCK_CMD_TEMPLATE) tests=$(COMPILER_LANG_CLASS_TESTS_GROUP6) testsuite=COMPILER; \
 	$(TEST_STATUS)</command>
 		<levels>
 			<level>extended</level>
@@ -131,9 +117,7 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=$(COMPILER_LANG_CLASS_TESTS_GROUP7) testsuite=COMPILER; \
-		$(EXEC_COMPILER_TEST); \
-		$(GEN_SUMMARY_GENERIC) tests=$(COMPILER_LANG_CLASS_TESTS_GROUP7) testsuite=COMPILER; \
+		<command>$(JCK_CMD_TEMPLATE) tests=$(COMPILER_LANG_CLASS_TESTS_GROUP7) testsuite=COMPILER; \
 	$(TEST_STATUS)</command>
 		<levels>
 			<level>extended</level>
@@ -147,9 +131,7 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=$(COMPILER_LANG_CLASS_TESTS_GROUP8) testsuite=COMPILER; \
-		$(EXEC_COMPILER_TEST); \
-		$(GEN_SUMMARY_GENERIC) tests=$(COMPILER_LANG_CLASS_TESTS_GROUP8) testsuite=COMPILER; \
+		<command>$(JCK_CMD_TEMPLATE) tests=$(COMPILER_LANG_CLASS_TESTS_GROUP8) testsuite=COMPILER; \
 	$(TEST_STATUS)</command>
 		<levels>
 			<level>extended</level>
@@ -163,9 +145,7 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=$(COMPILER_LANG_CLASS_TESTS_GROUP9) testsuite=COMPILER; \
-		$(EXEC_COMPILER_TEST); \
-		$(GEN_SUMMARY_GENERIC) tests=$(COMPILER_LANG_CLASS_TESTS_GROUP9) testsuite=COMPILER; \
+		<command>$(JCK_CMD_TEMPLATE) tests=$(COMPILER_LANG_CLASS_TESTS_GROUP9) testsuite=COMPILER; \
 	$(TEST_STATUS)</command>
 		<levels>
 			<level>extended</level>
@@ -179,9 +159,7 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=$(COMPILER_LANG_CLASS_TESTS_GROUP10) testsuite=COMPILER; \
-		$(EXEC_COMPILER_TEST); \
-		$(GEN_SUMMARY_GENERIC) tests=$(COMPILER_LANG_CLASS_TESTS_GROUP10) testsuite=COMPILER; \
+		<command>$(JCK_CMD_TEMPLATE) tests=$(COMPILER_LANG_CLASS_TESTS_GROUP10) testsuite=COMPILER; \
 	$(TEST_STATUS)</command>
 		<levels>
 			<level>extended</level>
@@ -195,9 +173,7 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=lang/CONV testsuite=COMPILER; \
-		$(EXEC_COMPILER_TEST); \
-		$(GEN_SUMMARY_GENERIC) tests=lang/CONV testsuite=COMPILER; \
+		<command>$(JCK_CMD_TEMPLATE) tests=lang/CONV testsuite=COMPILER; \
 	$(TEST_STATUS)</command>
 		<levels>
 			<level>extended</level>
@@ -211,9 +187,7 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=$(COMPILER_LANG_EXPR_TESTS_GROUP1) testsuite=COMPILER; \
-		$(EXEC_COMPILER_TEST); \
-		$(GEN_SUMMARY_GENERIC) tests=$(COMPILER_LANG_EXPR_TESTS_GROUP1) testsuite=COMPILER; \
+		<command>$(JCK_CMD_TEMPLATE) tests=$(COMPILER_LANG_EXPR_TESTS_GROUP1) testsuite=COMPILER; \
 	$(TEST_STATUS)</command>
 		<levels>
 			<level>extended</level>
@@ -227,9 +201,7 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=$(COMPILER_LANG_EXPR_TESTS_GROUP2) testsuite=COMPILER; \
-		$(EXEC_COMPILER_TEST); \
-		$(GEN_SUMMARY_GENERIC) tests=$(COMPILER_LANG_EXPR_TESTS_GROUP2) testsuite=COMPILER; \
+		<command>$(JCK_CMD_TEMPLATE) tests=$(COMPILER_LANG_EXPR_TESTS_GROUP2) testsuite=COMPILER; \
 	$(TEST_STATUS)</command>
 		<levels>
 			<level>extended</level>
@@ -243,9 +215,7 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=$(COMPILER_LANG_EXPR_TESTS_GROUP3) testsuite=COMPILER; \
-		$(EXEC_COMPILER_TEST); \
-		$(GEN_SUMMARY_GENERIC) tests=$(COMPILER_LANG_EXPR_TESTS_GROUP3) testsuite=COMPILER; \
+		<command>$(JCK_CMD_TEMPLATE) tests=$(COMPILER_LANG_EXPR_TESTS_GROUP3) testsuite=COMPILER; \
 	$(TEST_STATUS)</command>
 		<levels>
 			<level>extended</level>
@@ -259,9 +229,7 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=$(COMPILER_LANG_EXPR_TESTS_GROUP4) testsuite=COMPILER; \
-		$(EXEC_COMPILER_TEST); \
-		$(GEN_SUMMARY_GENERIC) tests=$(COMPILER_LANG_EXPR_TESTS_GROUP4) testsuite=COMPILER; \
+		<command>$(JCK_CMD_TEMPLATE) tests=$(COMPILER_LANG_EXPR_TESTS_GROUP4) testsuite=COMPILER; \
 	$(TEST_STATUS)</command>
 		<levels>
 			<level>extended</level>
@@ -275,9 +243,7 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=$(COMPILER_LANG_EXPR_TESTS_GROUP5) testsuite=COMPILER; \
-		$(EXEC_COMPILER_TEST); \
-		$(GEN_SUMMARY_GENERIC) tests=$(COMPILER_LANG_EXPR_TESTS_GROUP5) testsuite=COMPILER; \
+		<command>$(JCK_CMD_TEMPLATE) tests=$(COMPILER_LANG_EXPR_TESTS_GROUP5) testsuite=COMPILER; \
 	$(TEST_STATUS)</command>
 		<levels>
 			<level>extended</level>
@@ -291,9 +257,7 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=$(COMPILER_LANG_EXPR_TESTS_GROUP6) testsuite=COMPILER; \
-		$(EXEC_COMPILER_TEST); \
-		$(GEN_SUMMARY_GENERIC) tests=$(COMPILER_LANG_EXPR_TESTS_GROUP6) testsuite=COMPILER; \
+		<command>$(JCK_CMD_TEMPLATE) tests=$(COMPILER_LANG_EXPR_TESTS_GROUP6) testsuite=COMPILER; \
 	$(TEST_STATUS)</command>
 		<levels>
 			<level>extended</level>
@@ -307,9 +271,7 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=$(COMPILER_LANG_EXPR_TESTS_GROUP7) testsuite=COMPILER; \
-		$(EXEC_COMPILER_TEST); \
-		$(GEN_SUMMARY_GENERIC) tests=$(COMPILER_LANG_EXPR_TESTS_GROUP7) testsuite=COMPILER; \
+		<command>$(JCK_CMD_TEMPLATE) tests=$(COMPILER_LANG_EXPR_TESTS_GROUP7) testsuite=COMPILER; \
 	$(TEST_STATUS)</command>
 		<levels>
 			<level>extended</level>
@@ -323,9 +285,7 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=$(COMPILER_LANG_EXPR_TESTS_GROUP8) testsuite=COMPILER; \
-		$(EXEC_COMPILER_TEST); \
-		$(GEN_SUMMARY_GENERIC) tests=$(COMPILER_LANG_EXPR_TESTS_GROUP8) testsuite=COMPILER; \
+		<command>$(JCK_CMD_TEMPLATE) tests=$(COMPILER_LANG_EXPR_TESTS_GROUP8) testsuite=COMPILER; \
 	$(TEST_STATUS)</command>
 		<levels>
 			<level>extended</level>
@@ -339,9 +299,7 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=$(COMPILER_LANG_EXPR_TESTS_GROUP9) testsuite=COMPILER; \
-		$(EXEC_COMPILER_TEST); \
-		$(GEN_SUMMARY_GENERIC) tests=$(COMPILER_LANG_EXPR_TESTS_GROUP9) testsuite=COMPILER; \
+		<command>$(JCK_CMD_TEMPLATE) tests=$(COMPILER_LANG_EXPR_TESTS_GROUP9) testsuite=COMPILER; \
 	$(TEST_STATUS)</command>
 		<levels>
 			<level>extended</level>
@@ -355,9 +313,7 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=$(COMPILER_LANG_EXPR_TESTS_GROUP10) testsuite=COMPILER; \
-		$(EXEC_COMPILER_TEST); \
-		$(GEN_SUMMARY_GENERIC) tests=$(COMPILER_LANG_EXPR_TESTS_GROUP10) testsuite=COMPILER; \
+		<command>$(JCK_CMD_TEMPLATE) tests=$(COMPILER_LANG_EXPR_TESTS_GROUP10) testsuite=COMPILER; \
 	$(TEST_STATUS)</command>
 		<levels>
 			<level>extended</level>
@@ -371,9 +327,7 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=$(COMPILER_LANG_EXPR_TESTS_GROUP11) testsuite=COMPILER; \
-		$(EXEC_COMPILER_TEST); \
-		$(GEN_SUMMARY_GENERIC) tests=$(COMPILER_LANG_EXPR_TESTS_GROUP11) testsuite=COMPILER; \
+		<command>$(JCK_CMD_TEMPLATE) tests=$(COMPILER_LANG_EXPR_TESTS_GROUP11) testsuite=COMPILER; \
 	$(TEST_STATUS)</command>
 		<levels>
 			<level>extended</level>
@@ -387,9 +341,7 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=lang/INTF testsuite=COMPILER; \
-		$(EXEC_COMPILER_TEST); \
-		$(GEN_SUMMARY_GENERIC) tests=lang/INTF testsuite=COMPILER; \
+		<command>$(JCK_CMD_TEMPLATE) tests=lang/INTF testsuite=COMPILER; \
 	$(TEST_STATUS)</command>
 		<levels>
 			<level>extended</level>
@@ -403,9 +355,7 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=lang/LMBD testsuite=COMPILER; \
-		$(EXEC_COMPILER_TEST); \
-		$(GEN_SUMMARY_GENERIC) tests=lang/LMBD testsuite=COMPILER; \
+		<command>$(JCK_CMD_TEMPLATE) tests=lang/LMBD testsuite=COMPILER; \
 	$(TEST_STATUS)</command>
 		<levels>
 			<level>extended</level>
@@ -419,9 +369,7 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=lang/ARR testsuite=COMPILER; \
-		$(EXEC_COMPILER_TEST); \
-		$(GEN_SUMMARY_GENERIC) tests=lang/ARR testsuite=COMPILER; \
+		<command>$(JCK_CMD_TEMPLATE) tests=lang/ARR testsuite=COMPILER; \
 	$(TEST_STATUS)</command>
 		<levels>
 			<level>extended</level>
@@ -435,9 +383,7 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=lang/DASG testsuite=COMPILER; \
-		$(EXEC_COMPILER_TEST); \
-		$(GEN_SUMMARY_GENERIC) tests=lang/DASG testsuite=COMPILER; \
+		<command>$(JCK_CMD_TEMPLATE) tests=lang/DASG testsuite=COMPILER; \
 	$(TEST_STATUS)</command>
 		<levels>
 			<level>extended</level>
@@ -451,9 +397,7 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=lang/EXCP testsuite=COMPILER; \
-		$(EXEC_COMPILER_TEST); \
-		$(GEN_SUMMARY_GENERIC) tests=lang/EXCP testsuite=COMPILER; \
+		<command>$(JCK_CMD_TEMPLATE) tests=lang/EXCP testsuite=COMPILER; \
 	$(TEST_STATUS)</command>
 		<levels>
 			<level>extended</level>
@@ -467,9 +411,7 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=lang/EXEC testsuite=COMPILER; \
-		$(EXEC_COMPILER_TEST); \
-		$(GEN_SUMMARY_GENERIC) tests=lang/EXEC testsuite=COMPILER; \
+		<command>$(JCK_CMD_TEMPLATE) tests=lang/EXEC testsuite=COMPILER; \
 	$(TEST_STATUS)</command>
 		<levels>
 			<level>extended</level>
@@ -483,9 +425,7 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=lang/FP  testsuite=COMPILER; \
-		$(EXEC_COMPILER_TEST); \
-		$(GEN_SUMMARY_GENERIC) tests=lang/FP  testsuite=COMPILER; \
+		<command>$(JCK_CMD_TEMPLATE) tests=lang/FP testsuite=COMPILER; \
 	$(TEST_STATUS)</command>
 		<levels>
 			<level>extended</level>
@@ -499,9 +439,7 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=lang/ICLS testsuite=COMPILER; \
-		$(EXEC_COMPILER_TEST); \
-		$(GEN_SUMMARY_GENERIC) tests=lang/ICLS testsuite=COMPILER; \
+		<command>$(JCK_CMD_TEMPLATE) tests=lang/ICLS testsuite=COMPILER; \
 	$(TEST_STATUS)</command>
 		<levels>
 			<level>extended</level>
@@ -515,9 +453,7 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=lang/INFR testsuite=COMPILER; \
-		$(EXEC_COMPILER_TEST); \
-		$(GEN_SUMMARY_GENERIC) tests=lang/INFR testsuite=COMPILER; \
+		<command>$(JCK_CMD_TEMPLATE) tests=lang/INFR testsuite=COMPILER; \
 	$(TEST_STATUS)</command>
 		<levels>
 			<level>extended</level>
@@ -531,9 +467,7 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=lang/MOD testsuite=COMPILER; \
-		$(EXEC_COMPILER_TEST); \
-		$(GEN_SUMMARY_GENERIC) tests=lang/MOD testsuite=COMPILER; \
+		<command>$(JCK_CMD_TEMPLATE) tests=lang/MOD testsuite=COMPILER; \
 	$(TEST_STATUS)</command>
 		<levels>
 			<level>extended</level>
@@ -550,9 +484,7 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=lang/NAME testsuite=COMPILER; \
-		$(EXEC_COMPILER_TEST); \
-		$(GEN_SUMMARY_GENERIC) tests=lang/NAME testsuite=COMPILER; \
+		<command>$(JCK_CMD_TEMPLATE) tests=lang/NAME testsuite=COMPILER; \
 	$(TEST_STATUS)</command>
 		<levels>
 			<level>extended</level>
@@ -566,9 +498,7 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=lang/PKGS testsuite=COMPILER; \
-		$(EXEC_COMPILER_TEST); \
-		$(GEN_SUMMARY_GENERIC) tests=lang/PKGS testsuite=COMPILER; \
+		<command>$(JCK_CMD_TEMPLATE) tests=lang/PKGS testsuite=COMPILER; \
 	$(TEST_STATUS)</command>
 		<levels>
 			<level>extended</level>
@@ -582,9 +512,7 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=lang/THRD testsuite=COMPILER; \
-		$(EXEC_COMPILER_TEST); \
-		$(GEN_SUMMARY_GENERIC) tests=lang/THRD testsuite=COMPILER; \
+		<command>$(JCK_CMD_TEMPLATE) tests=lang/THRD testsuite=COMPILER; \
 	$(TEST_STATUS)</command>
 		<levels>
 			<level>extended</level>
@@ -598,9 +526,7 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=lang/TYPE testsuite=COMPILER; \
-		$(EXEC_COMPILER_TEST); \
-		$(GEN_SUMMARY_GENERIC) tests=lang/TYPE testsuite=COMPILER; \
+		<command>$(JCK_CMD_TEMPLATE) tests=lang/TYPE testsuite=COMPILER; \
 	$(TEST_STATUS)</command>
 		<levels>
 			<level>extended</level>
@@ -622,9 +548,7 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=lang/ANNOT testsuite=COMPILER; \
-		$(EXEC_COMPILER_TEST); \
-		$(GEN_SUMMARY_GENERIC) tests=lang/ANNOT testsuite=COMPILER; \
+		<command>$(JCK_CMD_TEMPLATE) tests=lang/ANNOT testsuite=COMPILER; \
 	$(TEST_STATUS)</command>
 		<levels>
 			<level>extended</level>
@@ -638,9 +562,7 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=lang/LEX testsuite=COMPILER; \
-		$(EXEC_COMPILER_TEST); \
-		$(GEN_SUMMARY_GENERIC) tests=lang/LEX testsuite=COMPILER; \
+		<command>$(JCK_CMD_TEMPLATE) tests=lang/LEX testsuite=COMPILER; \
 	$(TEST_STATUS)</command>
 		<levels>
 			<level>extended</level>
@@ -654,9 +576,7 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=lang/STMT testsuite=COMPILER; \
-		$(EXEC_COMPILER_TEST); \
-		$(GEN_SUMMARY_GENERIC) tests=lang/STMT testsuite=COMPILER; \
+		<command>$(JCK_CMD_TEMPLATE) tests=lang/STMT testsuite=COMPILER; \
 	$(TEST_STATUS)</command>
 		<levels>
 			<level>extended</level>
