@@ -19,8 +19,8 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=jaxws/mapping testsuite=DEVTOOLS; \
-		$(EXEC_DEVTOOLS_TEST); \
+		<command>$(GEN_JTB_GENERIC) tests=jaxws/mapping testsuite=DEVTOOLS &amp;&amp; \
+		$(EXEC_DEVTOOLS_TEST) &amp;&amp; \
 		$(GEN_SUMMARY_GENERIC) tests=jaxws/mapping testsuite=DEVTOOLS; \
 	$(TEST_STATUS)</command>
 		<levels>

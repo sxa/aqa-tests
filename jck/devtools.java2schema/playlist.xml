@@ -18,8 +18,8 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=java2schema/CustomizedMapping testsuite=DEVTOOLS; \
-		$(EXEC_DEVTOOLS_TEST); \
+		<command>$(GEN_JTB_GENERIC) tests=java2schema/CustomizedMapping testsuite=DEVTOOLS &amp;&amp; \
+		$(EXEC_DEVTOOLS_TEST) &amp;&amp; \
 		$(GEN_SUMMARY_GENERIC) tests=java2schema/CustomizedMapping testsuite=DEVTOOLS; \
 	$(TEST_STATUS)</command>
 		<levels>
@@ -37,8 +37,8 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=java2schema/DefaultMapping testsuite=DEVTOOLS; \
-		$(EXEC_DEVTOOLS_TEST); \
+		<command>$(GEN_JTB_GENERIC) tests=java2schema/DefaultMapping testsuite=DEVTOOLS &amp;&amp; \
+		$(EXEC_DEVTOOLS_TEST) &amp;&amp; \
 		$(GEN_SUMMARY_GENERIC) tests=java2schema/DefaultMapping testsuite=DEVTOOLS; \
 	$(TEST_STATUS)</command>
 		<levels>

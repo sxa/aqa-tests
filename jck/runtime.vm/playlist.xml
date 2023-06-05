@@ -27,8 +27,8 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=vm/constantpool testsuite=RUNTIME; \
-		$(EXEC_RUNTIME_TEST); \
+		<command>$(GEN_JTB_GENERIC) tests=vm/constantpool testsuite=RUNTIME &amp;&amp; \
+		$(EXEC_RUNTIME_TEST) &amp;&amp; \
 		$(GEN_SUMMARY_GENERIC) tests=vm/constantpool testsuite=RUNTIME; \
 	$(TEST_STATUS)</command>
 		<levels>
@@ -53,8 +53,8 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=vm/jdwp testsuite=RUNTIME concurrency=1; \
-		$(EXEC_RUNTIME_TEST); \
+		<command>$(GEN_JTB_GENERIC) tests=vm/jdwp testsuite=RUNTIME concurrency=1 &amp;&amp; \
+		$(EXEC_RUNTIME_TEST_WITH_AGENT) &amp;&amp; \
 		$(GEN_SUMMARY_GENERIC) tests=vm/jdwp testsuite=RUNTIME; \
 	$(TEST_STATUS)</command>
 		<levels>
@@ -69,8 +69,8 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=vm/jvmti testsuite=RUNTIME concurrency=1; \
-		$(EXEC_RUNTIME_TEST); \
+		<command>$(GEN_JTB_GENERIC) tests=vm/jvmti testsuite=RUNTIME concurrency=1 &amp;&amp; \
+		$(EXEC_RUNTIME_TEST) &amp;&amp; \
 		$(GEN_SUMMARY_GENERIC) tests=vm/jvmti testsuite=RUNTIME; \
 	$(TEST_STATUS)</command>
 		<levels>
@@ -105,8 +105,8 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=vm/overview testsuite=RUNTIME; \
-		$(EXEC_RUNTIME_TEST); \
+		<command>$(GEN_JTB_GENERIC) tests=vm/overview testsuite=RUNTIME &amp;&amp; \
+		$(EXEC_RUNTIME_TEST) &amp;&amp; \
 		$(GEN_SUMMARY_GENERIC) tests=vm/overview testsuite=RUNTIME; \
 	$(TEST_STATUS)</command>
 		<levels>
@@ -121,8 +121,8 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=vm/classfmt testsuite=RUNTIME; \
-		$(EXEC_RUNTIME_TEST); \
+		<command>$(GEN_JTB_GENERIC) tests=vm/classfmt testsuite=RUNTIME &amp;&amp; \
+		$(EXEC_RUNTIME_TEST) &amp;&amp; \
 		$(GEN_SUMMARY_GENERIC) tests=vm/classfmt testsuite=RUNTIME; \
 	$(TEST_STATUS)</command>
 		<levels>
@@ -137,8 +137,8 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=vm/module testsuite=RUNTIME; \
-		$(EXEC_RUNTIME_TEST); \
+		<command>$(GEN_JTB_GENERIC) tests=vm/module testsuite=RUNTIME &amp;&amp; \
+		$(EXEC_RUNTIME_TEST) &amp;&amp; \
 		$(GEN_SUMMARY_GENERIC) tests=vm/module testsuite=RUNTIME; \
 	$(TEST_STATUS)</command>
 		<levels>
@@ -156,8 +156,8 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=vm/verifier/abstractAndNative testsuite=RUNTIME; \
-		$(EXEC_RUNTIME_TEST); \
+		<command>$(GEN_JTB_GENERIC) tests=vm/verifier/abstractAndNative testsuite=RUNTIME &amp;&amp; \
+		$(EXEC_RUNTIME_TEST) &amp;&amp; \
 		$(GEN_SUMMARY_GENERIC) tests=vm/verifier/abstractAndNative testsuite=RUNTIME; \
 	$(TEST_STATUS)</command>
 		<levels>
@@ -175,8 +175,8 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=$(VERIFIER_INSTRUCTIONS_TESTS_GROUP1) testsuite=RUNTIME; \
-		$(EXEC_RUNTIME_TEST); \
+		<command>$(GEN_JTB_GENERIC) tests=$(VERIFIER_INSTRUCTIONS_TESTS_GROUP1) testsuite=RUNTIME &amp;&amp; \
+		$(EXEC_RUNTIME_TEST) &amp;&amp; \
 		$(GEN_SUMMARY_GENERIC) tests=$(VERIFIER_INSTRUCTIONS_TESTS_GROUP1) testsuite=RUNTIME; \
 	$(TEST_STATUS)</command>
 		<levels>
@@ -194,8 +194,8 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=$(VERIFIER_INSTRUCTIONS_TESTS_GROUP2) testsuite=RUNTIME; \
-		$(EXEC_RUNTIME_TEST); \
+		<command>$(GEN_JTB_GENERIC) tests=$(VERIFIER_INSTRUCTIONS_TESTS_GROUP2) testsuite=RUNTIME &amp;&amp; \
+		$(EXEC_RUNTIME_TEST) &amp;&amp; \
 		$(GEN_SUMMARY_GENERIC) tests=$(VERIFIER_INSTRUCTIONS_TESTS_GROUP2) testsuite=RUNTIME; \
 	$(TEST_STATUS)</command>
 		<levels>
@@ -213,8 +213,8 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=$(VERIFIER_INSTRUCTIONS_TESTS_GROUP3) testsuite=RUNTIME; \
-		$(EXEC_RUNTIME_TEST); \
+		<command>$(GEN_JTB_GENERIC) tests=$(VERIFIER_INSTRUCTIONS_TESTS_GROUP3) testsuite=RUNTIME &amp;&amp; \
+		$(EXEC_RUNTIME_TEST) &amp;&amp; \
 		$(GEN_SUMMARY_GENERIC) tests=$(VERIFIER_INSTRUCTIONS_TESTS_GROUP3) testsuite=RUNTIME; \
 	$(TEST_STATUS)</command>
 		<levels>
@@ -232,8 +232,8 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=$(VERIFIER_INSTRUCTIONS_TESTS_GROUP4) testsuite=RUNTIME; \
-		$(EXEC_RUNTIME_TEST); \
+		<command>$(GEN_JTB_GENERIC) tests=$(VERIFIER_INSTRUCTIONS_TESTS_GROUP4) testsuite=RUNTIME &amp;&amp; \
+		$(EXEC_RUNTIME_TEST) &amp;&amp; \
 		$(GEN_SUMMARY_GENERIC) tests=$(VERIFIER_INSTRUCTIONS_TESTS_GROUP4) testsuite=RUNTIME; \
 	$(TEST_STATUS)</command>
 		<levels>
@@ -251,8 +251,8 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=vm/verifier/protectedCheck  testsuite=RUNTIME; \
-		$(EXEC_RUNTIME_TEST); \
+		<command>$(GEN_JTB_GENERIC) tests=vm/verifier/protectedCheck  testsuite=RUNTIME &amp;&amp; \
+		$(EXEC_RUNTIME_TEST) &amp;&amp; \
 		$(GEN_SUMMARY_GENERIC) tests=vm/verifier/protectedCheck testsuite=RUNTIME; \
 	$(TEST_STATUS)</command>
 		<levels>
@@ -270,8 +270,8 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=vm/verifier/subclassFinal testsuite=RUNTIME; \
-		$(EXEC_RUNTIME_TEST); \
+		<command>$(GEN_JTB_GENERIC) tests=vm/verifier/subclassFinal testsuite=RUNTIME &amp;&amp; \
+		$(EXEC_RUNTIME_TEST) &amp;&amp; \
 		$(GEN_SUMMARY_GENERIC) tests=vm/verifier/subclassFinal testsuite=RUNTIME; \
 	$(TEST_STATUS)</command>
 		<levels>
@@ -289,8 +289,8 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=vm/instr testsuite=RUNTIME; \
-		$(EXEC_RUNTIME_TEST); \
+		<command>$(GEN_JTB_GENERIC) tests=vm/instr testsuite=RUNTIME &amp;&amp; \
+		$(EXEC_RUNTIME_TEST) &amp;&amp; \
 		$(GEN_SUMMARY_GENERIC) tests=vm/instr testsuite=RUNTIME; \
 	$(TEST_STATUS)</command>
 		<levels>
@@ -305,8 +305,8 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=vm/cldc testsuite=RUNTIME; \
-		$(EXEC_RUNTIME_TEST); \
+		<command>$(GEN_JTB_GENERIC) tests=vm/cldc testsuite=RUNTIME &amp;&amp; \
+		$(EXEC_RUNTIME_TEST) &amp;&amp; \
 		$(GEN_SUMMARY_GENERIC) tests=vm/cldc testsuite=RUNTIME; \
 	$(TEST_STATUS)</command>
 		<levels>
@@ -321,8 +321,8 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=vm/concepts testsuite=RUNTIME; \
-		$(EXEC_RUNTIME_TEST); \
+		<command>$(GEN_JTB_GENERIC) tests=vm/concepts testsuite=RUNTIME &amp;&amp; \
+		$(EXEC_RUNTIME_TEST) &amp;&amp; \
 		$(GEN_SUMMARY_GENERIC) tests=vm/concepts testsuite=RUNTIME; \
 	$(TEST_STATUS)</command>
 		<levels>
@@ -337,8 +337,8 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=vm/fp testsuite=RUNTIME; \
-		$(EXEC_RUNTIME_TEST); \
+		<command>$(GEN_JTB_GENERIC) tests=vm/fp testsuite=RUNTIME &amp;&amp; \
+		$(EXEC_RUNTIME_TEST) &amp;&amp; \
 		$(GEN_SUMMARY_GENERIC) tests=vm/fp testsuite=RUNTIME; \
 	$(TEST_STATUS)</command>
 		<levels>
@@ -353,8 +353,8 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=vm/jni testsuite=RUNTIME; \
-		$(EXEC_RUNTIME_TEST); \
+		<command>$(GEN_JTB_GENERIC) tests=vm/jni testsuite=RUNTIME &amp;&amp; \
+		$(EXEC_RUNTIME_TEST) &amp;&amp; \
 		$(GEN_SUMMARY_GENERIC) tests=vm/jni testsuite=RUNTIME; \
 	$(TEST_STATUS)</command>
 		<levels>
@@ -369,8 +369,8 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=vm/typechecker testsuite=RUNTIME; \
-		$(EXEC_RUNTIME_TEST); \
+		<command>$(GEN_JTB_GENERIC) tests=vm/typechecker testsuite=RUNTIME &amp;&amp; \
+		$(EXEC_RUNTIME_TEST) &amp;&amp; \
 		$(GEN_SUMMARY_GENERIC) tests=vm/typechecker testsuite=RUNTIME; \
 	$(TEST_STATUS)</command>
 		<levels>

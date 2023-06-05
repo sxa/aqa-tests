@@ -29,8 +29,8 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=api/java_rmi testsuite=COMPILER; \
-		$(EXEC_COMPILER_TEST); \
+		<command>$(GEN_JTB_GENERIC) tests=api/java_rmi testsuite=COMPILER &amp;&amp; \
+		$(EXEC_COMPILER_TEST) &amp;&amp; \
 		$(GEN_SUMMARY_GENERIC) tests=api/java_rmi testsuite=COMPILER; \
 	$(TEST_STATUS)</command>
 		<levels>
@@ -49,8 +49,8 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=api/javax_annotation testsuite=COMPILER; \
-		$(EXEC_COMPILER_TEST); \
+		<command>$(GEN_JTB_GENERIC) tests=api/javax_annotation testsuite=COMPILER &amp;&amp; \
+		$(EXEC_COMPILER_TEST) &amp;&amp; \
 		$(GEN_SUMMARY_GENERIC) tests=api/javax_annotation testsuite=COMPILER; \
 	$(TEST_STATUS)</command>
 		<levels>
@@ -65,8 +65,8 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=api/javax_lang testsuite=COMPILER; \
-		$(EXEC_COMPILER_TEST); \
+		<command>$(GEN_JTB_GENERIC) tests=api/javax_lang testsuite=COMPILER &amp;&amp; \
+		$(EXEC_COMPILER_TEST) &amp;&amp; \
 		$(GEN_SUMMARY_GENERIC) tests=api/javax_lang testsuite=COMPILER; \
 	$(TEST_STATUS)</command>
 		<levels>
@@ -89,8 +89,8 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=api/javax_tools testsuite=COMPILER; \
-		$(EXEC_COMPILER_TEST); \
+		<command>$(GEN_JTB_GENERIC) tests=api/javax_tools testsuite=COMPILER &amp;&amp; \
+		$(EXEC_COMPILER_TEST) &amp;&amp; \
 		$(GEN_SUMMARY_GENERIC) tests=api/javax_tools testsuite=COMPILER; \
 	$(TEST_STATUS)</command>
 		<levels>
@@ -113,8 +113,8 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB_GENERIC) tests=api/signaturetest testsuite=COMPILER; \
-		$(EXEC_COMPILER_TEST); \
+		<command>$(GEN_JTB_GENERIC) tests=api/signaturetest testsuite=COMPILER &amp;&amp; \
+		$(EXEC_COMPILER_TEST) &amp;&amp; \
 		$(GEN_SUMMARY_GENERIC) tests=api/signaturetest testsuite=COMPILER; \
 	$(TEST_STATUS)</command>
 		<levels>
@@ -139,8 +139,8 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB) tests=api/java_rmi testsuite=COMPILER$(USEQ); \
-			$(START_MULTI_JVM_COMP_TEST); \
+		<command>$(GEN_JTB) tests=api/java_rmi testsuite=COMPILER$(USEQ) &amp;&amp; \
+			$(START_MULTI_JVM_COMP_TEST) &amp;&amp; \
 			$(GEN_SUMMARY) tests=api/java_rmi testsuite=COMPILER; \
 		$(TEST_STATUS)</command>
 		<levels>
@@ -159,8 +159,8 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB) tests=api/javax_annotation testsuite=COMPILER$(USEQ); \
-			$(START_MULTI_JVM_COMP_TEST); \
+		<command>$(GEN_JTB) tests=api/javax_annotation testsuite=COMPILER$(USEQ) &amp;&amp; \
+			$(START_MULTI_JVM_COMP_TEST) &amp;&amp; \
 			$(GEN_SUMMARY) tests=api/javax_annotation testsuite=COMPILER; \
 		$(TEST_STATUS)</command>
 		<levels>
@@ -175,8 +175,8 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB) tests=api/javax_lang testsuite=COMPILER$(USEQ); \
-		$(START_MULTI_JVM_COMP_TEST); \
+		<command>$(GEN_JTB) tests=api/javax_lang testsuite=COMPILER$(USEQ) &amp;&amp; \
+		$(START_MULTI_JVM_COMP_TEST) &amp;&amp; \
 		$(GEN_SUMMARY) tests=api/javax_lang testsuite=COMPILER; \
 		$(TEST_STATUS)</command>
 		<levels>
@@ -199,8 +199,8 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB) tests=api/javax_tools testsuite=COMPILER$(USEQ); \
-		$(START_MULTI_JVM_COMP_TEST); \
+		<command>$(GEN_JTB) tests=api/javax_tools testsuite=COMPILER$(USEQ) &amp;&amp; \
+		$(START_MULTI_JVM_COMP_TEST) &amp;&amp; \
 		$(GEN_SUMMARY) tests=api/javax_tools testsuite=COMPILER; \
 		$(TEST_STATUS)</command>
 		<levels>
@@ -223,8 +223,8 @@
 		<variations>
 			<variation>NoOptions</variation>
 		</variations>
-		<command>$(GEN_JTB) tests=api/signaturetest testsuite=COMPILER$(USEQ); \
-		$(START_MULTI_JVM_COMP_TEST); \
+		<command>$(GEN_JTB) tests=api/signaturetest testsuite=COMPILER$(USEQ) &amp;&amp; \
+		$(START_MULTI_JVM_COMP_TEST) &amp;&amp; \
 		$(GEN_SUMMARY) tests=api/signaturetest testsuite=COMPILER; \
 		$(TEST_STATUS)</command>
 		<levels>
