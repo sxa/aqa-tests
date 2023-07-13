@@ -196,6 +196,23 @@
 				</if>
 			</else>
 		</if>
+		<exec executable="find" dir="${JCK_ROOT_USED}/.." failonerror="true">
+			<arg value="${JCK_ROOT_USED}" />
+			<arg value="-type" />
+			<arg value="f"/>
+			<arg value="("/>
+			<arg value="-name"/>
+			<arg value="*.sh" />
+			<arg value="-o"/>
+			<arg value="-name"/>
+			<arg value="*.bat" />
+			<arg value=")" />
+			<arg value="-exec" />
+			<arg value="chmod" />
+			<arg value="a+x" />
+			<arg value="{}" />
+			<arg value=";" />
+		</exec>
 		<if>
 			<isset property="isZOS" />
 			<then>
