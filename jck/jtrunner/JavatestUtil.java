@@ -688,7 +688,7 @@ public class JavatestUtil {
 			} 
 
 			fileContent += "concurrency " + concurrencyString + ";\n";
-			fileContent += "timeoutfactor 100" + ";\n";							// lang.CLSS,CONV,STMT,INFR requires more than 1h to complete. lang.Annot,EXPR,LMBD require more than 2h to complete tests
+			fileContent += "timeoutfactor 10" + ";\n";							// lang.CLSS,CONV,STMT,INFR requires more than 1h to complete. lang.Annot,EXPR,LMBD require more than 2h to complete tests
 			fileContent += keyword + ";\n";
 			
 			if (testExecutionType.equals("multijvm")) { 
