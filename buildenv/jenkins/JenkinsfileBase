@@ -705,8 +705,8 @@ def runTest( ) {
 				echo "env.DISPLAY is ${env.DISPLAY}"
 
 			} else if (env.SPEC.startsWith('sunos')) {
-				sh "/usr/X11/bin/Xvfb :2 -screen 0 1024x768x24 &"
-				env.DISPLAY = ":2"
+				sh "/usr/X11/bin/Xvfb :99 -screen 0 1024x768x24 &"
+				env.DISPLAY = ":99"
 				echo "env.DISPLAY is ${env.DISPLAY}"
 			}
 		}
