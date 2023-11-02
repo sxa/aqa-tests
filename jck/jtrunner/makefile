@@ -121,7 +121,7 @@ ifneq (,$(findstring hp,$(OS)))
 	OFLAGTEMP=ld -b -o
 	JCKJNI=$(OFLAGTEMP) $(FULLOUTDIR)$@ jckjni.o
 	#JCKATR=$(OFLAGTEMP) $(FULLOUTDIR)$@ jckatr.o
-	JCKJVMTI=$(OFLAGTEMP) $(FULLOUTDIR)$@ jckjvmti.o
+	#JCKJVMTI=$(OFLAGTEMP) $(FULLOUTDIR)$@ jckjvmti.o
 	JCKFOREIGN=$(OFLAGTEMP) $(FULLOUTDIR)$@ jckforeign.o
 	SYSTEMINFOUSENATIVE=$(OFLAGTEMP) $@ com_sun_management_mbeans_loading_SystemInfoUseNativeLib.o
 	GETLIBIDFROMNATIVE=$(OFLAGTEMP) $@ com_sun_management_mbeans_loading_GetLibIdFromNativeLib.o
@@ -249,7 +249,7 @@ ifeq ($(OS),win)
 endif
 
 ifeq ($(shell test $(JDK_VERSION) -ge 19; echo $$?),0)
-	OBJS=$(LIBPREF)jckjni.$(LIBEXT) $(LIBPREF)jckjvmti.$(LIBEXT) $(LIBPREF)jckforeign.$(LIBEXT) $(LIBPREF)systemInfo.$(LIBEXT) $(LIBPREF)jmxlibid.$(LIBEXT) $(LIBPREF)genrandom.$(LIBEXT)
+	OBJS=$(LIBPREF)jckjni.$(LIBEXT) $(LIBPREF)jckforeign.$(LIBEXT) $(LIBPREF)systemInfo.$(LIBEXT) $(LIBPREF)jmxlibid.$(LIBEXT) $(LIBPREF)genrandom.$(LIBEXT)
 else
 	OBJS=$(LIBPREF)jckjni.$(LIBEXT) $(LIBPREF)jckjvmti.$(LIBEXT) $(LIBPREF)systemInfo.$(LIBEXT) $(LIBPREF)jmxlibid.$(LIBEXT) $(LIBPREF)genrandom.$(LIBEXT)
 endif
