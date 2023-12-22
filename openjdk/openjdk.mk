@@ -19,7 +19,7 @@ OS:=$(shell uname -s)
 
 ifeq ($(OS),Linux)
 	NPROCS:=$(shell grep -c ^processor /proc/cpuinfo)
-	MEMORY_SIZE:=$(shell KMEMMB=`awk '/^MemTotal:/{print int($$2/1024)}' /proc/meminfo`; if [ -r /sys/fs/cgroup/memory/memory.limit_in_bytes ]; then CGMEMMB=`awk '{print $$1/1048576}' < /sys/fs/cgroup/memory/memory.limit_in_bytes`; if [ "$${KMEMMB}" -lt "$${CGMEMMB}" ]; then echo "$${KMEMMB}"; else echo "$${CGMEMMB}"; fi; else; echo $${KMEMMB}; fi)
+	MEMORY_SIZE:=$(shell KMEMMB=`awk '/^MemTotal:/{print int($$2/1024)}' /proc/meminfo`; if [ -r /sys/fs/cgroup/memory/memory.limit_in_bytes ]; then CGMEMMB=`awk '{print $$1/1048576}' < /sys/fs/cgroup/memory/memory.limit_in_bytes`; if [ "$${KMEMMB}" -lt "$${CGMEMMB}" ]; then echo "$${KMEMMB}"; else echo "$${CGMEMMB}"; fi; else echo $${KMEMMB}; fi)
 endif
 ifeq ($(OS),Darwin)
 	NPROCS:=$(shell sysctl -n hw.ncpu)
@@ -47,10 +47,13 @@ endif
 # following: min(NPROCS/2, MEM_IN_GB/2).
 MEM := $(shell expr $(MEMORY_SIZE) / 2048)
 CORE := $(shell expr $(NPROCS) / 2 + 1)
-CONC := $(CORE)
+
 ifeq ($(shell expr $(CORE) \> $(MEM)), 1)
 	CONC := $(MEM)
+else
+	CONC := $(CORE)
 endif
+
 # Can't determine cores on zOS, use a reasonable default
 ifeq ($(OS),OS/390)
 	CONC := 4
