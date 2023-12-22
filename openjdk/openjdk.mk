@@ -19,8 +19,7 @@ OS:=$(shell uname -s)
 
 ifeq ($(OS),Linux)
 	NPROCS:=$(shell grep -c ^processor /proc/cpuinfo)
-	MEMORY_SIZE:=$(shell KMEMMB=`awk '/^MemTotal:/{print int($$2/1024)}' /proc/meminfo`; if [ -r /sys/fs/cgroup/memory/memory.limit_in_bytes ]; then CGMEMMB=`awk '{print $$1/1048576}' < /sys/fs/cgroup/memory/memory.limit_in_bytes`; if [ "$${KMEMMB}" -lt "$${CGMEMMB}" ]; then echo "$${KMEMMB}"; else echo "$${CGMEMMB}"; fi; else; echo $${KMEMMB};
-fi; echo SXAEC: $${CGMEMMB} = $${KMEMMB} 1>&2)
+	MEMORY_SIZE:=$(shell KMEMMB=`awk '/^MemTotal:/{print int($$2/1024)}' /proc/meminfo`; if [ -r /sys/fs/cgroup/memory/memory.limit_in_bytes ]; then CGMEMMB=`awk '{print $$1/1048576}' < /sys/fs/cgroup/memory/memory.limit_in_bytes`; if [ "$${KMEMMB}" -lt "$${CGMEMMB}" ]; then echo "$${KMEMMB}"; else echo "$${CGMEMMB}"; fi; else; echo $${KMEMMB}; fi; echo SXAEC: $${CGMEMMB} = $${KMEMMB} 1>&2)
 endif
 ifeq ($(OS),Darwin)
 	NPROCS:=$(shell sysctl -n hw.ncpu)
