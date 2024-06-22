@@ -86,6 +86,7 @@ endif
 ifeq ($(OS),OS/390)
 	CONC := 4
 endif
+CONC := 7
 JTREG_CONC ?= 3
 # Allow JTREG_CONC be set via parameter
 ifeq ($(JTREG_CONC), 0)
