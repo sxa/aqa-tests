@@ -75,8 +75,8 @@ ifeq ($(OS),OS/390)
 	EXTRA_OPTIONS += -Dcom.ibm.tools.attach.enable=yes
 endif
 # Upstream OpenJDK, roughly, sets concurrency based on the
-# following: min(NPROCS/2, MEM_IN_GB).
-MEM := $(shell expr $(MEMORY_SIZE) / 1024)
+# following: min(NPROCS/2, MEM_IN_GB/2).
+MEM := $(shell expr $(MEMORY_SIZE) / 2048)
 CORE := $(shell expr $(NPROCS) / 2 + 1)
 CONC := $(CORE)
 ifeq ($(shell expr $(CORE) \> $(MEM)), 1)
@@ -86,15 +86,16 @@ endif
 ifeq ($(OS),OS/390)
 	CONC := 4
 endif
-JTREG_CONC ?= 0
+CONC := 7
+JTREG_CONC ?= 3
 # Allow JTREG_CONC be set via parameter
 ifeq ($(JTREG_CONC), 0)
 	JTREG_CONC := $(CONC)
 	ifeq ($(JTREG_CONC), 0)
-		JTREG_CONC := 1
+		JTREG_CONC := 2
 	endif
 endif
-EXTRA_JTREG_OPTIONS += -concurrency:$(JTREG_CONC)
+EXTRA_JTREG_OPTIONS += -concurrency:5
 
 JTREG_BASIC_OPTIONS += -agentvm
 # Only run automatic tests
