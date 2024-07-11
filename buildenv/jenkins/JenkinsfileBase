@@ -618,7 +618,9 @@ def get_sources() {
 def makeCompileTest(){
 	String makeTestCmd = "bash ./compile.sh"
 	//unset LD_LIBRARY_PATH workaround for issue https://github.com/adoptium/infrastructure/issues/2934
-	if (JDK_IMPL == 'hotspot' && JDK_VERSION == '8' && PLATFORM.contains('alpine-linux')) {
+        echo "SXAEC: 6"
+	if (JDK_IMPL == 'hotspot' && PLATFORM.contains('alpine-linux')) {
+        echo "SXAEC: 7"
 		makeTestCmd = "unset LD_LIBRARY_PATH; $makeTestCmd"
 	}
 	dir('aqa-tests') {
