@@ -2235,16 +2235,6 @@
 	</test>
 	<test>
 		<testCaseName>jdk_security_infra</testCaseName>
-		<disables>
-			<disable>
-				<comment>https://github.ibm.com/runtimes/backlog/issues/1089</comment>
-				<impl>openj9</impl>
-				<testflag>fips140_2</testflag>
-			</disable>
-			<disable>
-				<comment>https://github.com/adoptium/aqa-tests/issues/4808</comment>
-			</disable>
-		</disables>
 		<variations>
 			<variation>Mode150</variation>
 			<variation>Mode650</variation>
