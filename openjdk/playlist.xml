@@ -2265,6 +2265,11 @@
 		<levels>
 			<level>extended</level>
 		</levels>
+		<impls>
+			<impl>hotspot</impl>
+			<impl>openj9</impl>
+			<impl>ibm</impl>
+		</impls>
 		<groups>
 			<group>openjdk</group>
 		</groups>
