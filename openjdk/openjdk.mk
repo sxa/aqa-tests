@@ -61,7 +61,7 @@ ifeq ($(OS),FreeBSD)
 	MEMORY_SIZE:=$(shell expr `sysctl -n hw.memsize` / 1024 / 1024)
 endif
 ifeq ($(CYGWIN),1)
- 	NPROCS:=$(NUMBER_OF_PROCESSORS)
+ 	NPROCS:=1
 	MEMORY_SIZE:=$(shell powershell -command "(Get-CimInstance Win32_ComputerSystem).TotalPhysicalMemory / 1024 / 1024")
 endif
 ifeq ($(OS),SunOS)	
