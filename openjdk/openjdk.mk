@@ -73,7 +73,7 @@ ifeq ($(OS),OS/390)
 endif
 # Upstream OpenJDK, roughly, sets concurrency based on the
 # following: min(NPROCS/2, MEM_IN_GB/2).
-MEM := $(shell expr $(MEMORY_SIZE) / 1536)
+MEM := $(shell expr $(MEMORY_SIZE) / 900)
 CORE := $(shell expr $(NPROCS))
 CONC := $(CORE)
 ifeq ($(shell test $(CORE) -gt $(MEM) && echo 1 || echo 0), 1)
