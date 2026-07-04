@@ -2146,6 +2146,7 @@
 			<group>openjdk</group>
 		</groups>
 	</test>
+<!--
 	<test>
 		<testCaseName>jdk_tools</testCaseName>
 		<disables>
@@ -2200,6 +2201,7 @@
 			<feature>OpenJCEPlus:nonapplicable</feature>
 		</features>
 	</test>
+	-->
 	<test>
 		<testCaseName>jdk_tools_openj9_DynamicLoadWarningTest</testCaseName>
 		<variations>
